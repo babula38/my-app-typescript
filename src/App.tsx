@@ -1,12 +1,12 @@
 import React from 'react';
-import TodoPage from './Todo/TodoPage';
+import TodoPage from './Features/Todo/TodoPage';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
-import TestPage from './Todo/TestPage';
+import TestPage from './Features/Todo/TestPage';
 
 function App() {
   return (
