@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TestPage() {
+export default function HomePage() {
     return (
         <div>
             from Home
