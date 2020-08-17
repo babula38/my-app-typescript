@@ -1,6 +1,6 @@
 import { useHistory, useParams } from "react-router-dom";
 
-import useFormValidation from '../Share/Hooks/useFormValidation';
+import useFormValidation from "Features/_Share/Hooks/useFormValidation";
 
 export interface TodoModel {
     cool: string,
@@ -16,7 +16,7 @@ interface TodoModelError {
 const INIL_OBJ: TodoModel = {
     cool: "",
     testDrop: "drop2",
-    gender:"male"
+    gender: "male"
 }
 const validator = (e: TodoModel) => {
     let error: any = {};
@@ -24,7 +24,7 @@ const validator = (e: TodoModel) => {
 
     return error;
 }
-export function useTodoPage_Present() {
+export function useTestPage_Present() {
     var { values, onChange, onBlur } = useFormValidation<TodoModel, TodoModelError>(INIL_OBJ, validator);
 
     let history = useHistory();

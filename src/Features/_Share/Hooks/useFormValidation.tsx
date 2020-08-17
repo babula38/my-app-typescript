@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, SyntheticEvent } from 'react'
 
 export default function useFormValidation<T, U>(initial: T, validators: (values: T) => U) {
     var [values, setValues] = useState<T>(initial);
@@ -6,6 +6,7 @@ export default function useFormValidation<T, U>(initial: T, validators: (values:
     let isSubmitting = false;
 
     const onChange = (e: any) => {
+        console.log(values);
         setValues({ ...values, [e.target.name]: e.target.value });
     }
 
@@ -17,7 +18,7 @@ export default function useFormValidation<T, U>(initial: T, validators: (values:
         setValues({ ...values, [e.target.name]: e.target.value });
     }
 
-    const onSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const onSubmit = (e: React.FormEvent<HTMLElement>) => {
         let result = validators(values);
         setErrors({ ...errors, ...result })
         //TODO: Logic to see if the form is valid 

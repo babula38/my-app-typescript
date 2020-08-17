@@ -3,22 +3,24 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
-import TodoPage from './Features/Todo/TodoPage';
 import HomePage from './Features/Home/HomePage';
+import TestPage from 'Features/ControllerTest/TestPage';
+import TodoPage from 'Features/Todo/Index';
+// import * as TodoPage from 'Features/Todo/Index';
 
 function Routing() {
   return (
     <Router>
       <Switch>
-        <Route path="/todo/:id">
-          <TodoPage />
+        <Route path="/test/:id">
+          <TestPage />
         </Route>
         <Route path="/home">
           <HomePage />
         </Route>
+        <Route exact path="/" component={TodoPage} />
       </Switch>
     </Router>
   );

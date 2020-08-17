@@ -1,10 +1,10 @@
 import React from 'react'
-import { useTodoPage_Present, TodoModel } from './TodoPage_Present';
-import nameOf from '../../Utility/Extensions/nameOf';
+import { useTestPage_Present, TodoModel } from './TestPage_Present';
+import nameOf from 'Utility/Extensions/nameOf';
 
 
-function TodoPage() {
-    var { values, Message, handleClick, onChange, onBlur } = useTodoPage_Present();
+function TestPage() {
+    var { values, Message, handleClick, onChange, onBlur } = useTestPage_Present();
 
     return (
         <div>
@@ -54,4 +54,4 @@ function TodoPage() {
     )
 }
 
-export default TodoPage
+export default TestPage
