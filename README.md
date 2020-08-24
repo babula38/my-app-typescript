@@ -11,3 +11,6 @@ This app it created to see what will be the ideal way to make a react app with b
 - [ ] Server side form validation.
 - [ ] How to include Authentication properly
 - [ ] Sharing the same validation message between server and client.
+
+### Forms
+- [ ] Add reset functionality to form.
